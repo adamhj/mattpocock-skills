@@ -31,6 +31,8 @@ _Avoid_: Client, buyer, account
 
 ## Single vs multi-context repos
 
+The on-disk paths for the glossary and context map are recorded in the **Workflow paths** table in this repo's `CLAUDE.md`/`AGENTS.md`. The examples below assume the Distributed layout; other layouts keep these files under `matt-workflow/`.
+
 **Single context (most repos):** One `CONTEXT.md` at the repo root.
 
 **Multiple contexts:** A `CONTEXT-MAP.md` at the repo root lists the contexts, where they live, and how they relate to each other:
@@ -51,10 +53,10 @@ _Avoid_: Client, buyer, account
 - **Ordering ↔ Billing**: Shared types for `CustomerId` and `Money`
 ```
 
-The skill infers which structure applies:
+The skill infers which structure applies — checking the paths from the Workflow paths table:
 
-- If `CONTEXT-MAP.md` exists, read it to find contexts
-- If only a root `CONTEXT.md` exists, single context
-- If neither exists, create a root `CONTEXT.md` lazily when the first term is resolved
+- If a context map exists, read it to find contexts
+- If only a root glossary exists, single context
+- If neither exists, create one lazily when the first term is resolved
 
 When multiple contexts exist, infer which one the current topic relates to. If unclear, ask.

@@ -14,7 +14,7 @@ npx skills update handoff
 
 `handoff` compacts the current conversation into a **handoff document** — a single write-up a fresh agent can read to pick up the work where you left off.
 
-It does **not** re-state what already lives elsewhere. Anything captured in a spec, plan, ADR, issue, commit, or diff is referenced by path or URL, never copied. The document carries only the live thread — what you were doing, why, and what's next — and it's saved to your OS's temporary directory, not into the workspace, so it never becomes another artifact to maintain.
+It does **not** re-state what already lives elsewhere. Anything captured in a spec, plan, ADR, issue, commit, or diff is referenced by path or URL, never copied. The document carries only the live thread — what you were doing, why, and what's next — and it's saved to the handoff docs path from the Workflow paths table (e.g. `matt-workflow/handoffs/` in the Centralized layout), inside the repo so it travels with the codebase. Add that path to `.gitignore` if you don't want handoff documents under version control.
 
 ## When to reach for it
 

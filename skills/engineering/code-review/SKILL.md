@@ -87,3 +87,25 @@ A change can pass one axis and fail the other:
 - Code that does exactly what the issue asked but breaks the project's conventions → **Spec pass, Standards fail.**
 
 Reporting them separately stops one axis from masking the other.
+
+## After review
+
+### If issues are found
+
+Suggest a path based on severity. All fix work happens in a **new session** — tell the user to open one and carry the context via `/handoff` or a fix issue:
+
+**Minor** (naming, comments, simple logic):
+
+- `/handoff` back to the original implementation session, or
+- `/handoff` to a new session for a fresh perspective.
+
+**Major** (architecture, logic errors, rework needed):
+
+- Create a fix issue referencing the original issue, then `/implement` in a new session, or
+- `/handoff` to a new session for significant fixes.
+
+### If review passes
+
+1. **ADR status** — check ADRs referenced in the issue. If any carry a `Status` field in `proposed`, ask whether to update to `accepted`. Skip ADRs with no Status field. Commit ADR updates separately.
+2. **Originating issue** — ask whether to update the issue: mark acceptance criteria complete, add implementation notes (clarifications, edge cases discovered). If there's a spec, ask whether to mark relevant sections as implemented.
+3. **Parent issue** — if the issue has a parent, ask whether to update the parent's tracking checklist: mark this issue `[x]`, update the progress counter, and update the timestamp. If all child issues are now complete, ask whether to close the parent.

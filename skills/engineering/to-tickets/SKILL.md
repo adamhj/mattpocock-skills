@@ -64,7 +64,7 @@ Publish the approved tickets. **How** depends on the tracker `/setup-matt-pocock
 
 Work the **frontier**: any ticket whose blockers are all done. For a purely linear chain that means top to bottom.
 
-Do NOT close or modify any parent issue.
+Do NOT close the parent issue. After publishing all children, update it with a tracking checklist (see step 6).
 
 <local-ticket-template>
 
@@ -105,3 +105,25 @@ The end-to-end behaviour this ticket makes work, from the user's perspective —
 In either form, avoid specific file paths or code snippets — they go stale fast. Exception: if a prototype produced a snippet that encodes a decision more precisely than prose can (state machine, reducer, schema, type shape), inline it and note briefly that it came from a prototype. Trim to the decision-rich parts — not a working demo, just the important bits.
 
 Work the frontier one ticket at a time with `/implement`, clearing context between tickets.
+
+### 6. Update the parent issue with a tracking checklist
+
+If the breakdown came from a parent issue, post a tracking comment to it after all children are published:
+
+```markdown
+## Breakdown Complete
+
+This issue has been broken down into vertical slices:
+
+- [ ] #child-1 - Title
+- [ ] #child-2 - Title
+- [ ] #child-3 - Title
+
+Progress: 0 / 3 completed
+
+This issue will close when all children are resolved.
+
+*Updated: YYYY-MM-DD HH:MM*
+```
+
+Do NOT close the parent issue.

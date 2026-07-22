@@ -18,6 +18,8 @@ Check with the user that these seams match their expectations.
 
 3. Write the spec using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage.
 
+4. If any ADRs referenced in the "Implementation Decisions" section carry a `Status` field in `proposed`, ask the user whether to update them to `accepted` (plan approved, ready to implement). Skip ADRs with no Status field.
+
 <spec-template>
 
 ## Problem Statement

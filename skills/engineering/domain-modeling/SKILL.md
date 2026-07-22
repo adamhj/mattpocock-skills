@@ -72,3 +72,10 @@ Only offer to create an ADR when all three are true:
 3. **The result of a real trade-off** — there were genuine alternatives and you picked one for specific reasons
 
 If any of the three is missing, skip the ADR. Use the format in [ADR-FORMAT.md](./ADR-FORMAT.md).
+
+## After domain modeling
+
+When domain modeling completes (typically after `/grill-with-docs`), assess the work's complexity and suggest a next step:
+
+- **If complex (needs multiple independent issues)**: "This looks like a multi-session build. Want to create a spec first with `/to-spec`, or go straight to `/to-tickets`?"
+- **If simple (fits in one session)**: "Ready to create a tracking ticket? Run `/to-tickets`, then we'll `/implement` in this session."

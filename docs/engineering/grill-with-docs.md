@@ -24,7 +24,7 @@ Reach for it at the very start of a change, when the plan is still fuzzy and the
 
 ## Prerequisites
 
-This skill is stateful — it writes into your repo as it grills. Resolved terms land in a `CONTEXT.md` glossary at the root (or the relevant context's `CONTEXT.md` if a `CONTEXT-MAP.md` marks a multi-context repo), and genuinely hard-to-reverse decisions land as ADRs under `docs/adr/`. Both are created lazily — nothing exists until the first term or decision crystallises — so you don't need to scaffold anything up front, but you do need to be somewhere it's safe to write these files.
+This skill is stateful — it writes into your repo as it grills. Resolved terms land in the domain glossary (path from the Workflow paths table — `CONTEXT.md` at the root in the Distributed layout, or under `matt-workflow/domain/` in Centralized; or the relevant context's glossary if a context map marks a multi-context repo), and genuinely hard-to-reverse decisions land as ADRs in the ADR directory (also from the Workflow paths table). Both are created lazily — nothing exists until the first term or decision crystallises — so you don't need to scaffold anything up front, but you do need to be somewhere it's safe to write these files.
 
 ## The grill
 
@@ -35,7 +35,7 @@ What makes this variant its own skill is where the answers go. As the grill runs
 ## It's working if
 
 - It asks one question at a time and waits, rather than dumping a questionnaire.
-- Terms get written to `CONTEXT.md` the moment they resolve, in your project's own words.
+- Terms get written to the glossary the moment they resolve, in your project's own words.
 - It reaches into the codebase to answer its own questions where it can.
 - ADRs stay rare — you're not asked to rubber-stamp reversible choices.
 

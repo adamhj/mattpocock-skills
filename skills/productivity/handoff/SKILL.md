@@ -5,7 +5,9 @@ argument-hint: "What will the next session be used for?"
 disable-model-invocation: true
 ---
 
-Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS - not the current workspace.
+Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save it to the **handoff docs** path recorded in the **Workflow paths** table in this repo's `CLAUDE.md`/`AGENTS.md` — run `/setup-matt-pocock-skills` if the table is missing.
+
+Handoff documents live inside the repo (e.g. `matt-workflow/handoffs/` in the Centralized layout) so they travel with the codebase. Add the handoff docs path to `.gitignore` if you don't want them under version control.
 
 Include a "suggested skills" section in the document, which suggests skills that the agent should invoke.
 
